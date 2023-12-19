@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   put_pixel.c                                        :+:      :+:    :+:   */
+/*   P_ft_strlen.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asaber <asaber@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ylaaross <ylaaross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 22:45:44 by asaber            #+#    #+#             */
-/*   Updated: 2023/12/16 15:24:05 by asaber           ###   ########.fr       */
+/*   Created: 2022/09/28 20:09:30 by ylaaross          #+#    #+#             */
+/*   Updated: 2023/12/19 19:43:59 by ylaaross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include <stdio.h>
 
-int32_t	ft_pixel(int32_t r, int32_t g, int32_t b, int32_t a)
+size_t	ft_strlenp(const char *s)
 {
-	return (r << 24 | g << 16 | b << 8 | a);
+	int	i;
+
+	i = 0;
+	if (!s)
+		return (0);
+	while (s[i])
+		i++;
+	return (i);
 }

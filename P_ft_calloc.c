@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   put_pixel.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asaber <asaber@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ylaaross <ylaaross@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 22:45:44 by asaber            #+#    #+#             */
-/*   Updated: 2023/12/16 15:24:05 by asaber           ###   ########.fr       */
+/*   Created: 2022/10/03 19:46:06 by ylaaross          #+#    #+#             */
+/*   Updated: 2022/10/04 18:43:02 by ylaaross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "libft.h"
+#include <stdlib.h>
 
-int32_t	ft_pixel(int32_t r, int32_t g, int32_t b, int32_t a)
+void	*ft_calloc(size_t count, size_t size)
 {
-	return (r << 24 | g << 16 | b << 8 | a);
+	char	*p;
+
+	if (size == SIZE_MAX)
+		return (0);
+	p = 0;
+	p = (char *)malloc(count * size);
+	if (p == 0)
+		return (0);
+	else
+		ft_bzero(p, count * size);
+	return (p);
 }

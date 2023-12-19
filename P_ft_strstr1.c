@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   put_pixel.c                                        :+:      :+:    :+:   */
+/*   ft_strstr1.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asaber <asaber@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ylaaross <ylaaross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 22:45:44 by asaber            #+#    #+#             */
-/*   Updated: 2023/12/16 15:24:05 by asaber           ###   ########.fr       */
+/*   Created: 2023/11/22 19:25:16 by ylaaross          #+#    #+#             */
+/*   Updated: 2023/11/22 19:25:33 by ylaaross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "stdio.h"
 
-int32_t	ft_pixel(int32_t r, int32_t g, int32_t b, int32_t a)
+void	cmp_ne_hay(char needle, char haystack, size_t *cmp)
 {
-	return (r << 24 | g << 16 | b << 8 | a);
+	if (needle == haystack)
+		*cmp = *cmp + 1;
 }

@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   put_pixel.c                                        :+:      :+:    :+:   */
+/*   P_cube3d.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asaber <asaber@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ylaaross <ylaaross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 22:45:44 by asaber            #+#    #+#             */
-/*   Updated: 2023/12/16 15:24:05 by asaber           ###   ########.fr       */
+/*   Created: 2023/10/16 15:23:57 by ylaaross          #+#    #+#             */
+/*   Updated: 2023/12/19 19:37:33 by ylaaross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "P_CUBE3D.h"
 
-int32_t	ft_pixel(int32_t r, int32_t g, int32_t b, int32_t a)
+void	init_convert(int *size, t_file *o, int *i, int *j)
 {
-	return (r << 24 | g << 16 | b << 8 | a);
+	*i = 0;
+	*j = 0;
+	*size = strlen_2d_st(o);
 }
